@@ -4,12 +4,12 @@ import Login from "../models/login.js";
 export default class LoginAccessor {
   static async getUserByName(loginUser) {
     await Connection.open("users");
-    const loginDB = await Login.findOne({ title: loginUser });
+    const loginDB = await Login.findOne({ user: loginUser });
     return loginDB;
   }
 
   static async getAllUsers() {
-    await Connection.open("user");
+    await Connection.open("users");
     const allUsers = await Login.find({});
     return allUsers;
   }
