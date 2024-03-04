@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Apartment Listings </h1>
+    <h2> Submit Apartment </h2>
+    <form method="POST">
+        <label for="lister">Lister</label>
+        <input type="text" name="lister" id="lister" />
+        <br />
+        <label for="specs">Specs</label>
+        <input type="text" name="text" id="specs" />
+        <br />
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" />
+        <br />
+        <label for="url">URL</label>
+        <input type="text" name="url" id="url" />
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+
+    <div class="listing" id="listingLabels">
+        <h3><%= listing.specs %></h3>
+        <p><%= listing.date %></p>
+    </div>
+
+</body>
+</html>
