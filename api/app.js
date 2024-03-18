@@ -11,8 +11,8 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(helmet());
-app.use(express.json());
-app.use(bodyParser.json());
+app.use(express.json()); 
+app.use(bodyParser.json()); 
 
 
 app.use("/", router);
